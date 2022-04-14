@@ -5,10 +5,10 @@ public class MapHelper {
         boolean[][] visited = new boolean[map.height][map.width];
 
         // subtract one to exclude starting point
-        return dfs(map.getStartCell(), visited) - 1;
+        return bfs(map.getStartCell(), visited) - 1;
     }
 
-    private static int dfs(Cell currentCell, boolean[][] visited) {
+    private static int bfs(Cell currentCell, boolean[][] visited) {
         visited[currentCell.y][currentCell.x] = true;
         int touchedCells = 0;
 
